@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty - Engineering Department</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 0;
+            color: #ffd700;
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .hamburger div {
+            width: 35px;
+            height: 5px;
+            margin: 6px 0;
+            background-color: #ffd700;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        /* Navigation Menu Styles */
+        nav ul {
+            list-style: none;
+            margin: 10px 0 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: 400;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Mobile Navigation */
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background: rgba(0, 0, 0, 0.7);
+                width: 100%;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                padding: 10px 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 1.2rem;
+            }
+        }
+
+        section {
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 10px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        section p, ul {
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        ul {
+            text-align: left;
+            display: inline-block;
+        }
+
+        ul li {
+            padding: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Faculty</h1>
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Faculty Section -->
+    <section>
+        <div class="container">
+            <h2>Faculty Details</h2>
+
+            <h3>College Dean</h3>
+            <p><strong>GILBERT D. DEBOMA, REE, M.Eng.</strong></p>
+            <p>Engr. Gilbert D. Deboma is a faculty member with 24 years of experience...</p>
+
+            <h3>Program Chairpersons</h3>
+            <ul>
+                <li><strong>BS Civil Engineering (BSCE):</strong> FERDINAND D. TABLIGAN, RCE, M.Eng.</li>
+                <li><strong>BS Computer Engineering (BSCpE):</strong> MELOJEAN C. MARAVE, LPT, MSIT</li>
+                <li><strong>BS Electrical Engineering (BSEE):</strong> GILBERT D. DEBOMA, REE, M.Eng.</li>
+                <li><strong>BS Mechanical Engineering (BSME):</strong> MARLON JAMES A. DEDICATORIA, RMEE, Ph.D.</li>
+                <li><strong>BS Mining Engineering (BSEM):</strong> DOROTHY JOYCE SOLPICO DESIERTO</li>
+            </ul>
+            <h3>Faculty Members</h3>
+            <h4>Civil Engineering</h4>
+            <ul>
+                <li>Engr. RONEL E. ROMERO</li>
+                <li>Engr. JEMAR DALUSONG</li>
+                <li>Engr. RAYMOND ARAMAY</li>
+                <li>Engr. ABRAHAM ANTONIO</li>
+                <li>Engr. MA. THEREZA VICHO</li>
+                <li>Engr. VICTOR D. VICHO</li>
+                <li>Engr. ELENA LYN TOMBALE</li>
+                <li>Engr. RYV ANTHONY BISQUERA</li>
+                <li>Engr. JOVEN MANANGAN</li>
+                <li>Engr. ELOISA ROMULO</li>
+                <li>Engr. MARKO ANTONIO FERNANDEZ</li>
+                <li>Engr. ZENDREE ARAMAY</li>
+            </ul>
+
+            <h4>Computer Engineering</h4>
+            <ul>
+                <li>Engr. RICKY S. BARRERA</li>
+                <li>Engr. BRYAN CARLOS B. ACAIN</li>
+                <li>Engr. OLIVER A. SABADO, JR.</li>
+                <li>Engr. DIONISIO M. MARTIN, JR.</li>
+                <li>Engr. FROILAN G. CANTILLO</li>
+                <li>Engr. ALLAN JAY L. MORILLO</li>
+                <li>Engr. DENNIZE JIANA R. BASILIO</li>
+                <li>Engr. KIRK LEE P. LEOMO</li>
+                <li>Engr. MARTEEN BERAVON REMOLACIO</li>
+            </ul>
+
+            <h4>Electrical Engineering</h4>
+            <ul>
+                <li>Engr. MARK LESTER PARALLAG</li>
+                <li>Engr. DORIS H. MARQUEZ</li>
+                <li>Engr. SENATO ORIANZA</li>
+                <li>Engr. CHRISTIAN MARAFINA</li>
+                <li>Engr. FERNAN EDARAD</li>
+                <li>Engr. RUE LEI BALICACO</li>
+            </ul>
+
+            <h4>Mechanical Engineering</h4>
+            <ul>
+                <li>Engr. Ma. Karla Jessica Bautista</li>
+                <li>Engr. JASPER ANTHONY CUEVAS</li>
+                <li>Engr. MICHAEL ROMUALDO</li>
+                <li>Engr. NHOELLE PADUA</li>
+            </ul>
+
+            <h4>Allied and General Education</h4>
+            <ul>
+                <li>Engr. MELISSA M. EBUE</li>
+                <li>Engr. CLARISSE HOPE M. RICO</li>
+                <li>Dr. EMELYN E. BUGAYONG</li>
+                <li>Engr. CINDY DULLAS</li>
+                <li>Dr. EDNA PUNZALAN</li>
+                <li>Ms. JANE D. DANILA</li>
+                <li>Mr. LUCIANO MEDRANO</li>
+                <li>Ms. APRIL BESA</li>
+                <li>Ms. SANTOS, MADELLE</li>
+                <li>Ms. MONICA PARANGAT</li>
+                <li>Ms. KAREN QUITORIANO</li>
+                <li>Ms. JIO ERIKA PELINIO</li>
+                <li>Ms. MAE JOYCE VELARDE</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Engineering Department. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

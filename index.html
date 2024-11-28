@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Department</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute; /* Ensures the hamburger is positioned relative to the top-left */
+    top: 20px; /* Adjusts the vertical position */
+    left: 20px; /* Adjusts the horizontal position */
+    z-index: 1000; /* Ensures it appears above other elements */
+}
+
+
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* For small screens */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: rgba(0, 0, 0, 0.9);
+                width: 100%;
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            nav ul.open {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 1.2rem;
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 40px 20px;
+            width: 80%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Engineering Department</h1>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section id="home">
+            <h2>Welcome to the Engineering Department</h2>
+            <p>Empowering innovation and excellence in engineering education, research, and community service.</p>
+        </section>
+
+        <section id="vision">
+            <h2>Our Vision</h2>
+            <p>PRMSU as a premier learner center and proactive university in a digital and global society.</p>
+        </section>
+
+        <section id="mission">
+            <h2>Our Mission</h2>
+            <p>The President Ramon Magsaysay State University shall primarily provide advanced and higher professional, technical, and special instructions in various disciplines; undertake research, extension, and income generation programs for the sustainable development of Zambales, the region, and the country.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: engineering@prmsu.edu.ph</p>
+            <p>Phone: +63 912 345 6789</p>
+            <p>Address: PRMSU, Zambales, Philippines</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Engineering Department. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
